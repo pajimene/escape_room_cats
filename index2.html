@@ -32,21 +32,18 @@
                 box-sizing: border-box;
             }
 
-            input[type=submit] {
-                width: 100%;
+            div[type=submit] {
+                width: auto;
                 background-color: #4CAF50;
                 color: white;
                 padding: 14px 20px;
-                margin: 8px 0;
+                margin: 12px 0;
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
+                text-align: center;
             }
-
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
+            
             .message-error {
                 color: darkred;
                 font-style: italic;
@@ -182,11 +179,6 @@
             background: transparent;
             }
 
-            #combination {
-                justify-self: center;
-            }
-
-
         </style>
 
 
@@ -208,7 +200,6 @@
                 Sigue el orden, busca los números correctos y el mensaje aparecerá.<br/><br/>
             </p>
             
-            <main>
                 <div id="combo-lock">
                     <div id="indicator" class="locked">
                         <svg class="locked" version="1.1" id="Lock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -225,130 +216,135 @@
             </svg>
             
                     </div>
-                    <div id="combination">
-                        <div class="wheel">
-                            <div class="increment" index="0">
-                                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-            </svg>
-                            </div>
-                            <input class="digit" index="0" type="number" value="0" min="0" max="9">
-                            <div class="decrement" index="0">
-                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                "/>
-            </svg>
-                            </div>
-                        </div>
-                        <div class="wheel">
-                            <div class="increment" index="1">
-                                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-            </svg>
-                            </div>
-                            <input class="digit" index="1" type="number" value="0" min="0" max="9">
-                            <div class="decrement" index="1">
-                                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                "/>
-            </svg>
-                            </div>
-                        </div>
-                        <div class="wheel">
-                            <div class="increment" index="2">
-                                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-            </svg>
-                            </div>
-                            <input class="digit" index="2" type="number" value="0" min="0" max="9">
-                            <div class="decrement" index="2">
-                                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                "/>
-            </svg>
-                            </div>
-                        </div>
-                        <div class="wheel">
-                            <div class="increment" index="3">
-                                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-            </svg>
-                            </div>
-                            <input class="digit" index="3" type="number" value="0" min="0" max="9">
-                            <div class="decrement" index="3">
-                                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                "/>
-            </svg>
-                            </div>
-                        </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="flex:1"></div>
+                                                <div id="combination">
+                                                    <div class="wheel">
+                                                        <div class="increment" index="0">
+                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+                                        </svg>
+                                                        </div>
+                                                        <input class="digit" index="0" type="number" value="0" min="0" max="9">
+                                                        <div class="decrement" index="0">
+                                                        <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+                                            "/>
+                                        </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wheel">
+                                                        <div class="increment" index="1">
+                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+                                        </svg>
+                                                        </div>
+                                                        <input class="digit" index="1" type="number" value="0" min="0" max="9">
+                                                        <div class="decrement" index="1">
+                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+                                            "/>
+                                        </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wheel">
+                                                        <div class="increment" index="2">
+                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+                                        </svg>
+                                                        </div>
+                                                        <input class="digit" index="2" type="number" value="0" min="0" max="9">
+                                                        <div class="decrement" index="2">
+                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+                                            "/>
+                                        </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wheel">
+                                                        <div class="increment" index="3">
+                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+                                        </svg>
+                                                        </div>
+                                                        <input class="digit" index="3" type="number" value="0" min="0" max="9">
+                                                        <div class="decrement" index="3">
+                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+                                            "/>
+                                        </svg>
+                                                        </div>
+                                                    </div>
 
-                        <div class="wheel">
-                            <div class="increment" index="4">
-                                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-            </svg>
-                            </div>
-                            <input class="digit" index="4" type="number" value="0" min="0" max="9">
-                            <div class="decrement" index="4">
-                                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                "/>
-            </svg>
-                            </div>
-                        </div>
-
-
-                        <div class="wheel">
-                            <div class="increment" index="5">
-                                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-            </svg>
-                            </div>
-                            <input class="digit" index="5" type="number" value="0" min="0" max="9">
-                            <div class="decrement" index="5">
-                                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                "/>
-            </svg>
-                            </div>
-                        </div>
+                                                    <div class="wheel">
+                                                        <div class="increment" index="4">
+                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+                                        </svg>
+                                                        </div>
+                                                        <input class="digit" index="4" type="number" value="0" min="0" max="9">
+                                                        <div class="decrement" index="4">
+                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+                                            "/>
+                                        </svg>
+                                                        </div>
+                                                    </div>
 
 
+                                                    <div class="wheel">
+                                                        <div class="increment" index="5">
+                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+                                        </svg>
+                                                        </div>
+                                                        <input class="digit" index="5" type="number" value="0" min="0" max="9">
+                                                        <div class="decrement" index="5">
+                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+                                            "/>
+                                        </svg>
+                                                        </div>
+                                                    </div>
 
+
+
+                            </div>
+
+                            <div style="flex:1"></div>
                     </div>
+
                 </div>
-            </main>   
             
             <br/><br/>
             <div>                
                 <p id="message" class="message-success">
                     ¡Buen trabajo, pequeños aprendices! acertasteis el código secreto. Seguid las pistas que os he dejado dentro del diccionario Francés-Español. Nadie sospechará de ese libro ya que ningún gato lo ha hablado en años.<br/><br/>
-                    <input type="submit" value="Siguiente" onclick="onClickNext()">
+                    <div type="submit" onclick="onClickNext()">Siguiente</div>
                 </p>
             </div>
             
