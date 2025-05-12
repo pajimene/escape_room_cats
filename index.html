@@ -10,18 +10,68 @@
                 padding: 0px;
                 margin: 0px;
                 font-family: 'MiFuente', sans-serif;
+                display: flex; 
+                flex-direction: column; 
+                width:100%; 
+                height: 100%;
+                background-color: #f2f2f2;
             }
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                }
+
+                input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                }
+
+                input[type=submit]:hover {
+                background-color: #45a049;
+                }
+
+                
+
+
 
         </style>
     </head>
     <body>
-        <div style="background-color: #F5DCC6; width:100%; height: 100px; display: flex">
-            <img style="margin-left: 50px;" src="./img/paw.jpg">
-            <h1 style="flex: 1; text-align: center">Don Bigotes y el Grimiau de las Sombras</h1>
-            <img style="margin-right: 25px;"  src="./img/two_paws.jpg">
+        <div style="background-color: #F5DCC6; width:100%; height: 125px; display: flex">
+            <img style="margin-left: 15px; align-self: center;" height="75px" src="./img/paw.jpg">
+            <h1 style="flex: 1; text-align: center">Don Bigotes <br/>y el Grimiau de las Sombras</h1>
+            <img style="margin-right: 5px;" height="75px"  src="./img/two_paws.jpg">
         </div>
-        <div>
-            Content
+        <div style="display: flex; flex-direction: column; flex:1; padding: 25px; padding-top: 50px;">
+            <h2>Aula de Encantamientos - Profesora Zarpagrís</h2>
+            <p>
+                Os encontráis en el Aula de Encantamientos. Alguien os ha descubierto y ha bloqueado la puerta.<br/><br/>
+                Para continuar vuestro camino, deberéis encontrar la palabra secreta y pronunciarla en voz alta con fuerza. Sólo entonces podréis abrir la puerta encantada.<br/><br/>
+                Recordad que para abrir puertas se debe utilizar un hechizo muy poderoso, y todos los hechizos poderosos están custiodiados mágicamente, así que solo podrá ser revelado mediante magia... <br/><br/>
+            </p>
+            <div style="flex: 1"></div>
+            <div>
+                <label for="fname">¿Cual es el nombre del hechizo?</label>
+                <input type="text" id="hechizo" name="hechizo" placeholder="Nombre del hechizo..">
+
+            </div>
+
+            <div>
+                <input type="submit" value="Lanzar hechizo">
+            </div>
+            
         </div>
         
     </body>
