@@ -27,15 +27,16 @@
                 box-sizing: border-box;
             }
 
-            input[type=submit] {
-                width: 100%;
+            div[type=submit] {
+                width: auto;
                 background-color: #4CAF50;
                 color: white;
                 padding: 14px 20px;
-                margin: 8px 0;
+                margin: 12px 0;
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
+                text-align: center;
             }
 
             input[type=submit]:hover {
@@ -80,7 +81,7 @@
                     }, 10000)
                     
                 } else {
-                    messageElement.innerHTML = "¡Incorrecto! El hechizo no ha funcionado. ¿Seguro que ese es el hechizo más poderoso?";
+                    messageElement.innerHTML = "¡Incorrecto! El hechizo no ha funcionado. ¿Seguro que ese es el hechizo más poderoso?<br/>Recuerda que los hechizos más poderosos solo se revelan con magia.";
                     messageElement.className = "message-error";
                 }
 
@@ -112,8 +113,8 @@
 
             </div>
 
-            <div>
-                <input type="submit" value="Lanzar hechizo" onclick="onClickSpell()">
+            <div style="margin-bottom: 25px">
+                <div type="submit" onclick="onClickSpell()">Lanzar hechizo</div>
             </div>
             
         </div>
