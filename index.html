@@ -25,9 +25,9 @@
                 border: 1px solid #ccc;
                 border-radius: 4px;
                 box-sizing: border-box;
-                }
+            }
 
-                input[type=submit] {
+            input[type=submit] {
                 width: 100%;
                 background-color: #4CAF50;
                 color: white;
@@ -36,17 +36,57 @@
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
-                }
+            }
 
-                input[type=submit]:hover {
+            input[type=submit]:hover {
                 background-color: #45a049;
-                }
+            }
 
-                
+            .message-error {
+                color: darkred;
+                font-style: italic;
+                font-weight: bold;
+            }
 
-
+            .message-success {
+                color: darkblue;
+                font-style: italic;
+                font-weight: bold;
+            }
 
         </style>
+
+        <script>
+            function onClickSpell() {
+
+                let spellName = document.getElementById("spell").value;
+                let messageElement = document.getElementById("message");
+                if ('' == spellName) {
+                    messageElement.innerHTML = "Pero si no has escrito ningún hechizo!!";
+                    return;
+                }
+
+                spellName = spellName.toLowerCase();
+                if (spellName == "zarpafuego") {
+                    messageElement.innerHTML = "mmmm, ¿pero lo habéis gritado? ¡Tenéis que gritar el hechizo!"; //" La puerta se abre y puedes continuar tu camino.";
+                    messageElement.className = "message-success";
+                    setTimeout(() => {
+                        messageElement.innerHTML = "¡Correcto! La puerta se abre ante el hechizo, dirigíos al despacho de 'Don Bigotes'.";
+                        messageElement.className = "message-success";
+                        setTimeout(() => {
+                            window.location.href = "./index2.html";
+                        }, 10000);
+                        
+                    }, 10000)
+                    
+                } else {
+                    messageElement.innerHTML = "¡Incorrecto! El hechizo no ha funcionado. ¿Seguro que ese es el hechizo más poderoso?";
+                    messageElement.className = "message-error";
+                }
+
+            }
+        </script>
+
     </head>
     <body>
         <div style="background-color: #F5DCC6; width:100%; height: 125px; display: flex">
@@ -59,17 +99,21 @@
             <p>
                 Os encontráis en el Aula de Encantamientos. Alguien os ha descubierto y ha bloqueado la puerta.<br/><br/>
                 Para continuar vuestro camino, deberéis encontrar la palabra secreta y pronunciarla en voz alta con fuerza. Sólo entonces podréis abrir la puerta encantada.<br/><br/>
-                Recordad que para abrir puertas se debe utilizar un hechizo muy poderoso, y todos los hechizos poderosos están custiodiados mágicamente, así que solo podrá ser revelado mediante magia... <br/><br/>
+                Recordad que para abrir puertas se debe utilizar un hechizo muy poderoso, y todos los hechizos poderosos están custiodiados mágicamente, así que solo podrán ser revelado mediante magia... <br/><br/>
             </p>
             <div style="flex: 1"></div>
             <div>
+                <p id="message" class="message-error"></p>
+            </div>
+            <div style="flex: 1"></div>
+            <div>
                 <label for="fname">¿Cual es el nombre del hechizo?</label>
-                <input type="text" id="hechizo" name="hechizo" placeholder="Nombre del hechizo..">
+                <input type="text" id="spell" name="spell" placeholder="Nombre del hechizo..">
 
             </div>
 
             <div>
-                <input type="submit" value="Lanzar hechizo">
+                <input type="submit" value="Lanzar hechizo" onclick="onClickSpell()">
             </div>
             
         </div>
