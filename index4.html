@@ -60,6 +60,14 @@
                 display: none;
             }
 
+            /*
+            @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
+            body {
+            font-family: "Source Code Pro", monospace;
+            }
+            */
+
+
             #combo-lock #indicator {
             border: 2px solid #070707;
             border-radius: 50%;
@@ -183,11 +191,9 @@
             <img style="margin-right: 5px;" height="75px"  src="./img/two_paws.jpg">
         </div>
         <div style="display: flex; flex-direction: column; flex:1; padding: 25px; padding-top: 50px;">
-            <h2>Despacho del Director - Don Bigotes</h2>
+            <h2>Sala de Artefactos Oscuros - Don Felis Tretas</h2>
             <p>
-                Solo quien sigue el rastro de la fortuna, que se esconde tras el dique, podrá caminar bajo la lluvia sin miedo a la riada, entrar en la casa marcada... y descubrir los secretos de la guerra que una vez lo cambió todo.<br/><br/>
-
-                Sigue el orden, busca los números correctos y el mensaje aparecerá.<br/><br/>
+                Si juntais las soluciones de todos (de mayor a menor edad) obtendréis la siguiente pista:<br/><br/>
             </p>
             
                 <div id="combo-lock">
@@ -282,45 +288,6 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="wheel">
-                                                        <div class="increment" index="4">
-                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-                                        </svg>
-                                                        </div>
-                                                        <input class="digit" index="4" type="number" value="0" min="0" max="9">
-                                                        <div class="decrement" index="4">
-                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                                            "/>
-                                        </svg>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="wheel">
-                                                        <div class="increment" index="5">
-                                                            <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-                                        <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
-                                            c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
-                                        </svg>
-                                                        </div>
-                                                        <input class="digit" index="5" type="number" value="0" min="0" max="9">
-                                                        <div class="decrement" index="5">
-                                                            <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-                                        <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
-                                            c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
-                                            "/>
-                                        </svg>
-                                                        </div>
-                                                    </div>
-
 
 
                             </div>
@@ -332,7 +299,11 @@
             
             <div style="flex:1"></div>
             <div id="message" class="message-hidden">                
-                <p>¡Buen trabajo, pequeños aprendices! acertasteis el código secreto. Seguid las pistas que os he dejado dentro del diccionario Francés-Español. Nadie sospechará de ese libro ya que ningún gato lo ha hablado en años.<br/><br/></p>
+                <p>
+                    ¡Mensaje desbloqueado! Habéis unido vuestras mentes y superado el reto de los solitarios enigmas.
+                    El poder combinado de vuestras respuestas ha hecho temblar las sombras...<br/><br/>
+                    Dirigíos al panel de recortes, y buscad el comic sujeto con un extraño imán, y movedlo con cuidado... tras él se esconde una llave que abre uno de los armarios...<br/><br/>
+                </p>
                 <div type="submit" onclick="onClickNext()">Siguiente</div>
             </div>
             
@@ -348,9 +319,9 @@
             // ***
             
             var combinationLock = {
-                combination: 526134,
+                combination: 5353,
                 locked: true,
-                wheels: [0, 0, 0, 0, 0, 0],
+                wheels: [0, 0, 0, 0],
                 increment: function(wheel) {
                     if (this.wheels[wheel] === 9) {
                         this.wheels[wheel] = 0;
@@ -477,10 +448,10 @@
             }
 
             function onClickNext() {
-                window.location.href = "index3.html";
+                window.location.href = "index5.html";
             }
                         
-         </script>
+                    </script>
 
     </body>
 
