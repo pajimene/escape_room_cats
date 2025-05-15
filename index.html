@@ -53,20 +53,67 @@
                 font-weight: bold;
             }
 
+            .message-hidden {
+                display: none;
+            }
+
         </style>
 
         <script>
+
+
+            var success = 0;
+
             function onClickSpell() {
 
                 let spellName = document.getElementById("spell").value;
-                let messageElement = document.getElementById("message");
+                console.log(spellName);
+
+                document.querySelector('#message-error-1').classList.remove('message-success');
+                document.querySelector('#message-error-1').classList.add('message-hidden');
+
+                document.querySelector('#message-error-2').classList.remove('message-success');
+                document.querySelector('#message-error-2').classList.add('message-hidden');
+
+                document.querySelector('#message-success-1').classList.remove('message-success');
+                document.querySelector('#message-success-1').classList.add('message-hidden');
+
+
                 if ('' == spellName) {
-                    messageElement.innerHTML = "Pero si no has escrito ningún hechizo!!";
+                    document.querySelector('#message-error-1').classList.remove('message-hidden');
+                    document.querySelector('#message-error-1').classList.add('message-success');
                     return;
                 }
 
                 spellName = spellName.toLowerCase();
-                if (spellName == "zarpafuego") {
+                if (spellName != "zarpafuego") {
+                    document.querySelector('#message-error-2').classList.remove('message-hidden');
+                    document.querySelector('#message-error-2').classList.add('message-success');
+                    return;
+                }
+
+                if (success == 0) {
+                    success = 1;
+                    
+                    document.querySelector('#div-button-1').classList.remove('message-success');
+                    document.querySelector('#div-button-1').classList.add('message-hidden');
+
+                    document.querySelector('#message-success-1').classList.remove('message-hidden');
+                    document.querySelector('#message-success-1').classList.add('message-success');
+                    return;
+                }
+
+                document.querySelector('#message-success-2').classList.remove('message-hidden');
+                document.querySelector('#message-success-2').classList.add('message-success');
+
+                success++;
+
+                if (success > 2) {
+                    window.location.href = "./index2.html";
+                }
+
+                /*
+
                     messageElement.innerHTML = "mmmm, ¿pero lo habéis gritado? ¡Tenéis que gritar el hechizo!"; //" La puerta se abre y puedes continuar tu camino.";
                     messageElement.className = "message-success";
                     setTimeout(() => {
@@ -82,7 +129,7 @@
                     messageElement.innerHTML = "¡Incorrecto! El hechizo no ha funcionado. ¿Seguro que ese es el hechizo más poderoso?<br/>Recuerda que los hechizos más poderosos solo se revelan con magia.";
                     messageElement.className = "message-error";
                 }
-
+                */
             }
         </script>
 
@@ -101,18 +148,34 @@
                 Recordad que para abrir puertas se debe utilizar un hechizo muy poderoso, y todos los hechizos poderosos están custiodiados mágicamente, así que solo podrán ser revelado mediante magia... <br/><br/>
             </p>
             <div style="flex: 1"></div>
-            <div>
-                <p id="message" class="message-error"></p>
+
+            <div id="message-error-1" class="message-hidden">                
+                <p>Pero si no has escrito ningún hechizo!!.<br/><br/></p>
             </div>
+
+            <div id="message-error-2" class="message-hidden">                
+                <p>¡Incorrecto! El hechizo no ha funcionado. ¿Seguro que ese es el hechizo más poderoso?<br/>Recuerda que los hechizos más poderosos solo se revelan con magia.<br/><br/></p>
+            </div>
+            
+
+            <div id="message-success-1" class="message-hidden">                
+                <p>mmmm, ¿pero lo habéis gritado? ¡Tenéis que gritar el hechizo!.<br/><br/><br/><br/><br/><br/></p>
+                <div type="submit" onclick="onClickSpell()">Siguiente</div>
+            </div>
+            <div id="message-success-2" class="message-hidden">                
+                <p>¡Correcto! La puerta se abre ante el hechizo, dirigíos al despacho de 'Don Bigotes'.<br/><br/><br/><br/><br/><br/></p>
+                <div type="submit" onclick="onClickSpell()">Siguiente</div>
+            </div>                                    
+            
             <div style="flex: 1"></div>
-            <div>
+
+            <div id="div-button-1">
                 <label for="fname">¿Cual es el nombre del hechizo?</label>
                 <input type="text" id="spell" name="spell" placeholder="Nombre del hechizo..">
 
-            </div>
-
-            <div style="margin-bottom: 25px">
-                <div type="submit" onclick="onClickSpell()">Lanzar hechizo</div>
+                <div style="margin-bottom: 25px">
+                    <div type="submit" onclick="onClickSpell()">Lanzar hechizo</div>
+                </div>
             </div>
             
         </div>
